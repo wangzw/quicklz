@@ -3,7 +3,7 @@ SET (project_BIN qzip)
 SET (project_BIN qunzip)
 SET (project_BIN qcat)
 
-ADD_LIBRARY(quicklz SHARED quicklz.c)
+ADD_LIBRARY(quicklz STATIC quicklz.c)
 
 LINK_DIRECTORIES(${quicklz}/lib)
 ADD_EXECUTABLE(qzip qzip.c quicklz.c)
